@@ -13,7 +13,7 @@ else if(session_status() === PHP_SESSION_NONE) {session_start();}
 @require_once("const.php");
 
 
-/************************ CREATE CLASS PROPERTIES *************************/
+/************************ CONNECTION PROPERTIES *************************/
 /*************** WARNING: do not edit ********************/
 trait makeProperties
 {
@@ -55,7 +55,7 @@ class InvokeDatabase
 /*************** DATABASE CONNECTION *****************/
 /*************** WARNING: do not edit ********************/
 
-   protected static function InvokeConnection() : mixed /* returning an unknow value */
+   private static function InvokeConnection() : mixed /* returning an unknow value */
    {
      try
      {
