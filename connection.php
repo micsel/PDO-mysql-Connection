@@ -50,7 +50,7 @@ class InvokeDatabase
   use makeProperties {makeProperties::__dbchar as protected; }
   use makeProperties {makeProperties::__ErrorLogger as protected; }
 
-  const GLOBAL_SQL = "SELECT * FROM userAccount LIMIT 1"; /* ONLY FOR TESTING SHOW PURPOSE ------- you can remove/edit it if you want*/
+  const GLOBAL_SQL = "SELECT * FROM TABLE_NAME LIMIT 1"; /* ONLY FOR TESTING SHOW PURPOSE ------- you can remove/edit it if you want*/
 
 /*************** DATABASE CONNECTION *****************/
 /*************** WARNING: do not edit ********************/
@@ -103,7 +103,7 @@ class InvokeDatabase
          {
            while($thisRow = $getUsers->fetch(PDO::FETCH_OBJ))
            {
-             $user = $thisRow->account_username;
+             $user = $thisRow->COLUMN_NAME;
            }
            return (string)$user;
          }
